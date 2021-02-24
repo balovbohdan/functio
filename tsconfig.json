@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "module": "commonjs",
+    "target": "es5",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "sourceMap": false,
+    "paths": {
+      "types": ["types"],
+      "utils": ["utils"],
+      "containers": ["containers"],
+      "interfaces": ["interfaces"],
+    },
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules"],
+}
