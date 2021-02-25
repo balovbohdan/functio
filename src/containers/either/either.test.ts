@@ -9,7 +9,7 @@ describe('containers/Either', () => {
   });
 
   it('should map value using given map function', () => {
-    const either = Either.of<number>(1);
+    const either = Either.of<string, number>(1);
     const eitherMapped = either.map((x) => x + 1);
     const expectedValue = 2;
 

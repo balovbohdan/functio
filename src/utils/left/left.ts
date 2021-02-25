@@ -1,8 +1,10 @@
 import { Either } from 'containers';
 import { IEither } from 'interfaces';
 
-const left = <T>(value: T): IEither<T> => (
-  Either.Left.of<T>(value)
+// left :: a -> Either.Left a
+
+const left = <A>(value: A): IEither<A, unknown> => (
+  Either.Left.of<A>(value)
 );
 
 export default left;

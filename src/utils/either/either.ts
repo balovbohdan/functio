@@ -4,12 +4,14 @@ import { IEither } from 'interfaces';
 
 import { Handler } from './types';
 
-const either = <V, R>(left: Handler<V, R>, right: Handler<V, R>, either: IEither<V>): R | undefined => {
+// either :: (a -> c) -> (b -> c) -> Either a b -> c | Undefined
+
+const either = <A, B, C>(left: Handler<A, C>, right: Handler<B, C>, either: IEither<A, B>): C | undefined => {
   switch (either.constructor) {
     case Either.Left:
-      return left(either.value);
+      return left(<A>either.value);
     case Either.Right:
-      return right(either.value);
+      return right(<B>either.value);
     default:
       return undefined;
   }

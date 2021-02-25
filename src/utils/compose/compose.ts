@@ -1,5 +1,7 @@
 import { F } from 'types';
 
+// compose :: ((y -> z), (x -> y),  ..., (a -> b)) -> a -> z
+
 const compose = (...fns: F[]): F => (
   (...args: unknown[]) => {
     const [result] = fns.reduceRight((argsAccumulator, fn) => {

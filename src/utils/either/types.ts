@@ -1,1 +1,1 @@
-export type Handler<V, R> = (value: V) => R;
+export type Handler<A, B> = (value: A) => B;

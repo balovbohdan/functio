@@ -7,8 +7,8 @@ class Either {
   static Left = Left;
   static Right = Right;
 
-  static of<T>(value: T): IEither<T> {
-    return Right.of<T>(value);
+  static of<L, R>(value: R): IEither<L, R> {
+    return Right.of<R>(value);
   }
 }
 
