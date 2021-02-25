@@ -33,7 +33,7 @@ class Maybe<T> implements IContainer<T> {
     }
   }
 
-  private get isNothing(): boolean {
+  get isNothing(): boolean {
     return isNil(this.value);
   }
 }
