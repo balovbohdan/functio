@@ -1,5 +1,5 @@
 import IContainer from './container';
 
-interface IEither<T> extends IContainer<T> {}
+type IEither<T> = IContainer<T>;
 
 export default IEither;

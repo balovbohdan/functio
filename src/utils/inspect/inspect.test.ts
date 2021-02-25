@@ -10,7 +10,7 @@ describe('utils/inspect', () => {
  });
 
  it('inspects named function', () => {
-   const fn = () => {};
+   const fn = () => { console.log('hello world'); };
    const inspectedValue = inspect(fn);
    const expectedInspectedValue = 'function fn() { }';
 
@@ -18,7 +18,7 @@ describe('utils/inspect', () => {
  });
 
  it('inspects anonymous function', () => {
-   const inspectedValue = inspect(() => {});
+   const inspectedValue = inspect(() => { console.log('hello world'); });
    const expectedInspectedValue = 'function () { }';
 
    expect(inspectedValue).toBe(expectedInspectedValue);

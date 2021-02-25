@@ -1,5 +1,7 @@
-const curry = (fn: Function): Function => (
-  function $curry(...args: any[]) {
+import { F } from 'types';
+
+const curry = (fn: F): F => (
+  function $curry(...args: unknown[]): F | unknown {
     const hasRestArguments = args.length < fn.length;
 
     if (hasRestArguments) {

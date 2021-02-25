@@ -1,5 +1,7 @@
-const compose = (...fns: Function[]): Function => (
-  (...args: any[]) => {
+import { F } from 'types';
+
+const compose = (...fns: F[]): F => (
+  (...args: unknown[]) => {
     const [result] = fns.reduceRight((argsAccumulator, fn) => {
       const nextArgs = fn.call(null, ...argsAccumulator);
 

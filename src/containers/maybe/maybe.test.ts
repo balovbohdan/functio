@@ -27,8 +27,8 @@ describe('containers/Maybe', () => {
   });
 
   it('should inspect nullish value', () => {
-    const value: any = null;
-    const maybe = Maybe.of<null>(value);
+    const value: unknown = null;
+    const maybe = Maybe.of<unknown>(value);
     const inspectedValue = maybe.inspect();
     const expectedInspectedValue = 'Nothing';
 
@@ -36,9 +36,9 @@ describe('containers/Maybe', () => {
   });
 
   it('should not map null value', () => {
-    const value: any = null;
-    const expectedMappedValue: any = null;
-    const maybe = Maybe.of<null>(value);
+    const value: unknown = null;
+    const expectedMappedValue: unknown = null;
+    const maybe = Maybe.of<unknown>(value);
     const mappedMaybe = maybe.map((x) => `mapped ${x}`);
 
     expect(mappedMaybe).toBe(maybe);
@@ -46,9 +46,9 @@ describe('containers/Maybe', () => {
   });
 
   it('should not map undefined value', () => {
-    const value: any = undefined;
-    const expectedMappedValue: any = undefined;
-    const maybe = Maybe.of<undefined>(value);
+    const value: unknown = undefined;
+    const expectedMappedValue: unknown = undefined;
+    const maybe = Maybe.of<unknown>(value);
     const mappedMaybe = maybe.map((x) => `mapped ${x}`);
 
     expect(mappedMaybe).toBe(maybe);

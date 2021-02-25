@@ -1,4 +1,3 @@
-import { Map } from 'types';
 import { IEither } from 'interfaces';
 
 import Left from './left';
