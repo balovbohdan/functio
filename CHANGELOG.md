@@ -1,6 +1,10 @@
 # CHANGELOG
 
-## Unreleased - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.0.1...HEAD)
+## Unreleased - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.1.0...HEAD)
+
+## 0.1.0 - 2021-02-25 - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.0.1...v0.1.0)
+- Added `id` util
+- Added exports from index
 
 ## 0.0.1 - 2021-02-24
 - Initial release
