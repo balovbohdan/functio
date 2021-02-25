@@ -1,12 +1,12 @@
-name: publish
+name: test
 
 on:
-  repository_dispatch:
-    types: [tested]
-    branches: [master]
+  push:
+    branches:
+      - master
 
 jobs:
-  tested:
+  build:
     runs-on: ubuntu-latest
 
     steps:
@@ -15,7 +15,16 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Publish 📦
+      - name: Install 🔧
+        run: npm install
+
+      - name: Lint 🧐
+        run: npm run lint
+
+      - name: Test 🚨
+        run: npm run test
+
+      - name: Publish 🏗️
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}

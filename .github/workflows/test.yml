@@ -1,6 +1,9 @@
 name: test
 
-on: push
+on:
+  push:
+    branches:
+      - !master
 
 jobs:
   build:
@@ -21,7 +24,3 @@ jobs:
       - name: Test 🚨
         run: npm run test
 
-      - name: Dispatch Test
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          event-type: tested
