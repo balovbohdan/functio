@@ -17,6 +17,11 @@ jobs:
 
       - name: Lint 🧐
         run: npm run lint
-        
+
       - name: Test 🚨
         run: npm run test
+
+      - name: Dispatch Test
+        uses: peter-evans/repository-dispatch@v1
+        with:
+          event-type: tested

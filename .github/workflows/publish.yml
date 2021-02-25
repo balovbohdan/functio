@@ -1,11 +1,12 @@
 name: publish
 
 on:
-  push:
-    branches: [ master ]
+  repository_dispatch:
+    types: [tested]
+    branches: [master]
 
 jobs:
-  build:
+  tested:
     runs-on: ubuntu-latest
 
     steps:
