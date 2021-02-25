@@ -1,4 +1,4 @@
-name: CI
+name: test
 
 on: push
 
@@ -20,6 +20,3 @@ jobs:
         
       - name: Test 🚨
         run: npm run test
-
-      - name: Build 🏗️
-        run: npm run build
