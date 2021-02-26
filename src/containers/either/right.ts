@@ -1,22 +1,22 @@
 import { Map } from 'types';
 import { inspect } from 'utils';
-import { IEither } from 'interfaces';
+import { IEitherSide } from 'interfaces';
 
-class Right<T> implements IEither<T> {
-  readonly value: T;
+class Right<A> implements IEitherSide<A> {
+  readonly value: A;
 
-  static of<T>(value: T): Right<T> {
-    return new Right<T>(value);
+  static of<C>(value: C): Right<C> {
+    return new Right<C>(value);
   }
 
-  private constructor(value: T) {
+  private constructor(value: A) {
     this.value = value;
   }
 
-  map<O>(map: Map<T, O>): Right<O> {
+  map<B>(map: Map<A, B>): Right<B> {
     const mappedValue = map(this.value);
 
-    return Right.of<O>(mappedValue);
+    return Right.of<B>(mappedValue);
   }
 
   inspect(): string {

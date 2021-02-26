@@ -2,6 +2,8 @@ import { O, F } from 'types';
 
 import { ValueWithInspect } from './types';
 
+// inspect :: a -> String
+
 const inspectFunction = (fn: F): string => (
   `function ${fn.name}() { }` || fn.toString()
 );

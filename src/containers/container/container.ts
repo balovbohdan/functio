@@ -2,21 +2,21 @@ import { Map } from 'types';
 import { inspect } from 'utils';
 import { IContainer } from 'interfaces';
 
-class Container<T> implements IContainer<T> {
-  readonly value: T;
+class Container<A> implements IContainer<A> {
+  readonly value: A;
 
-  static of<T>(value: T): Container<T> {
-    return new Container<T>(value);
+  static of<C>(value: C): Container<C> {
+    return new Container<C>(value);
   }
 
-  private constructor(value: T) {
+  private constructor(value: A) {
     this.value = value;
   }
 
-  map<O>(map: Map<T, O>): Container<O> {
+  map<B>(map: Map<A, B>): Container<B> {
     const mappedValue = map(this.value);
 
-    return Container.of<O>(mappedValue);
+    return Container.of<B>(mappedValue);
   }
 
   inspect(): string {

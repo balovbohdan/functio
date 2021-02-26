@@ -3,7 +3,7 @@ import Right from './right';
 
 describe('containers/Either', () => {
   it('should create container for a given value', () => {
-    const either = Either.of('value');
+    const either = Either.of<string>('value');
 
     expect(either).toBeInstanceOf(Right);
   });
@@ -18,7 +18,7 @@ describe('containers/Either', () => {
 
   it('should inspect', () => {
     const value = 'value';
-    const either = Either.of(value);
+    const either = Either.of<string>(value);
     const inspectedValue = either.inspect();
     const expectedInspectedvalue = `Right('${value}')`; 
 

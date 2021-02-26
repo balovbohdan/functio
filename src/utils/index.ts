@@ -5,4 +5,5 @@ export { default as id } from './id';
 export { default as inspect } from './inspect';
 export { default as isNil } from './is-nil';
 export { default as left } from './left';
+export { default as maybe } from './maybe';
 export { default as prop } from './prop';

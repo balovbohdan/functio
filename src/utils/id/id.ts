@@ -1,3 +1,5 @@
-const id = <T>(value: T): T => value;
+// identity :: a -> a
+
+const id = <A>(value: A): A => value;
 
 export default id;
