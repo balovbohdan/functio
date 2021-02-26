@@ -25,7 +25,7 @@ const inspectArray = (value: unknown[]): string => {
   return `[ ${result} ]`;
 };
 
-function inspect(value: unknown): string {
+function inspect<A extends unknown>(value: A): string {
   const isArray = Array.isArray(value);
   const isString = typeof value === 'string';
   const isObject = typeof value === 'object';

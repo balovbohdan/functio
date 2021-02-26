@@ -1,5 +1,5 @@
-import IContainer from './container';
+import IEitherSide from './either-side';
 
-type IEither<L, R> = IContainer<L | R>;
+type IEither<A, B> = IEitherSide<A | B>;
 
 export default IEither;

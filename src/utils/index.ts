@@ -1,9 +1,25 @@
-export { default as compose } from './compose';
-export { default as curry } from './curry';
-export { default as either } from './either';
-export { default as id } from './id';
-export { default as inspect } from './inspect';
-export { default as isNil } from './is-nil';
-export { default as left } from './left';
-export { default as maybe } from './maybe';
-export { default as prop } from './prop';
+import compose from './compose';
+import curry from './curry';
+import either, { getEither } from './either';
+import id from './id';
+import inspect from './inspect';
+import isNil from './is-nil';
+import left from './left';
+import maybe, { getMaybe } from './maybe';
+import prop, { getProp } from './prop';
+
+
+export {
+  compose,
+  curry,
+  either,
+  getEither,
+  id,
+  inspect,
+  isNil,
+  left,
+  maybe,
+  getMaybe,
+  prop,
+  getProp,
+};
