@@ -1,4 +1,4 @@
-export type Map<I, O> = (value: I) => O;
+export type Map<A, B> = (value: A) => B;
 
 export type O = { [key: string]: unknown };
 

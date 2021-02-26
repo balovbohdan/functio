@@ -2,24 +2,24 @@ import { Map } from 'types';
 import { isNil, inspect } from 'utils';
 import { IContainer } from 'interfaces';
 
-class Maybe<T> implements IContainer<T> {
-  readonly value: T;
+class Maybe<A> implements IContainer<A> {
+  readonly value: A;
 
-  static of<T>(value: T): Maybe<T> {
-    return new Maybe(value);
+  static of<C>(value: C): Maybe<C> {
+    return new Maybe<C>(value);
   }
 
-  private constructor(value: T) {
+  private constructor(value: A) {
     this.value = value;
   }
 
-  map<O>(map: Map<T, O>): Maybe<T | O> {
+  map<B>(map: Map<A, B>): Maybe<A | B> {
     if (this.isNothing) {
       return this;
     } else {
       const mappedValue = map(this.value);
 
-      return Maybe.of<O>(mappedValue);
+      return Maybe.of<B>(mappedValue);
     }
   }
 

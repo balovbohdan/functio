@@ -1,19 +1,19 @@
 import { Map } from 'types';
 import { inspect } from 'utils';
-import { IEither } from 'interfaces';
+import { IEitherSide } from 'interfaces';
 
-class Left<T> implements IEither<T> {
-  readonly value: T;
+class Left<A> implements IEitherSide<A> {
+  readonly value: A;
 
-  static of<T>(value: T): Left<T> {
-    return new Left<T>(value);
+  static of<C>(value: C): Left<C> {
+    return new Left<C>(value);
   }
 
-  private constructor(value: T) {
+  private constructor(value: A) {
     this.value = value;
   }
 
-  map<O>(map: Map<T, O>): Left<T> {
+  map<B>(map: Map<A, B>): Left<A> {
     return this;
   }
 
