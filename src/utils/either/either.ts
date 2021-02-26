@@ -2,7 +2,7 @@ import { curry } from 'utils';
 import { Either } from 'containers';
 import { IEither } from 'interfaces';
 
-import { Handler } from './types';
+import { Handler, EitherFunction } from './types';
 
 // either :: (a -> c) -> (b -> c) -> Either a b -> c | Undefined
 
@@ -17,4 +17,4 @@ const either = <A, B, C>(left: Handler<A, C>, right: Handler<B, C>, either: IEit
   }
 }
 
-export default curry(either);
+export default curry<EitherFunction>(either);

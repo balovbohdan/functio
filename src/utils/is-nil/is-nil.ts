@@ -1,6 +1,6 @@
 // isNil :: a -> Bool
 
-const isNil = (value: unknown): boolean => {
+const isNil = <A>(value: A): boolean => {
   const isNull = value === null;
   const isUndefined = value === undefined;
 

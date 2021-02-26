@@ -1,4 +1,2 @@
-import * as utils from 'utils';
-import * as containers from 'containers';
-
-export { utils, containers };
+export * from 'utils';
+export * from 'containers';

@@ -1,6 +1,12 @@
 # CHANGELOG
 
-## Unreleased - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.2.0...HEAD)
+## Unreleased - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.3.0...HEAD)
+
+## 0.3.0 - 2021-02-26 - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.2.0...v0.3.0)
+- Added `getEither` util
+- Added `getMaybe` util
+- Added `getProp` util
+- Improved types for utils and containers
 
 ## 0.2.0 - 2021-02-25 - [DIFF](https://github.com/ElateralLtd/ui-components/compare/v0.1.0...v0.2.0)
 - Added `maybe` util
